@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Management - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="btn small">← Home</a>
+    <h2>Book Management Page</h2>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h3>Add Book</h3>
+      <form id="bookForm" onsubmit="return false;">
+        <div class="row">
+          <label>Title<input id="title" required placeholder="Book title" /></label>
+          <label>Author<input id="author" required placeholder="Author name" /></label>
+          <label>Category
+            <select id="category" required>
+              <option value="">Select</option>
+              <option>Fiction</option>
+              <option>Comedy</option>
+              <option>Technical</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="controls">
+          <button id="addBtn" class="btn">Add Book</button>
+
+          <div class="inline-controls">
+            <button id="sortBtn" class="btn small">Sort A → Z</button>
+
+            <label class="filter">
+              Filter:
+              <select id="filterSelect">
+                <option value="All">All</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Technical">Technical</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h3>Books</h3>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
